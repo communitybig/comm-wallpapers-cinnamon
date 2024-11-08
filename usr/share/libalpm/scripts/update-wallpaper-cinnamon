@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Update the wallpapers whenever a wallpaper package is installed and includes it in gnome
+# Update the wallpapers whenever a wallpaper package is installed and includes it in Cinnamon
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-<wallpapers>' > /usr/share/gnome-background-properties/community-gnome.xml
+<wallpapers>' > /usr/share/gnome-background-properties/community-cinnamon.xml
 
 shopt -s nocasematch
 for img in /usr/share/backgrounds/community/*; do
@@ -16,9 +16,9 @@ echo "<wallpaper>
 <name>$name</name>
 <filename>$img</filename>
 <options>zoom</options>
-</wallpaper>" >> /usr/share/gnome-background-properties/community-gnome.xml
+</wallpaper>" >> /usr/share/gnome-background-properties/community-cinnamon.xml
     fi
 done
 shopt -u nocasematch
 
-echo '</wallpapers>' >> /usr/share/gnome-background-properties/community-gnome.xml
+echo '</wallpapers>' >> /usr/share/gnome-background-properties/community-cinnamon.xml
